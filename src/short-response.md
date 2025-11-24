@@ -122,7 +122,7 @@ You're building a game where players can raise different digital pets: Cats, Dog
 
 **Part A:** Describe in words how you would use inheritance to organize these classes.
 
-I would first create a class called "DigitalPets" as the parent class. I would then make a contructor that incorporates a `name`, `energy` level, and `happiness` level, and also can all `sleep`. I would then create a sub class for Cats, Dogs, and Birds, for example write "Digital Pets extends Cats". Then I would write a "super()" keyword for each subclass. Super() calls the parent’s class constructor, allowing the child class to inherit and correctly set up properties defined in the parent class "DigitalPets."
+I would first create a class called "DigitalPets" as the parent class. I would then make a contructor that incorporates a `name`, `energy` level, and `happiness` level, and also can all `sleep` in the parent class. I would then create a sub class for Cats, Dogs, and Birds, Then I would write a "super()" keyword for each subclass. Super() calls the parent’s class constructor, allowing the child class to inherit and correctly set up properties defined in the parent class "DigitalPets." I would then add each subclass's unique ability within the subclass. 
 
 **Part B:** Explain one advantage of using inheritance here instead of creating three completely separate classes.
 
