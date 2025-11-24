@@ -122,10 +122,11 @@ You're building a game where players can raise different digital pets: Cats, Dog
 
 **Part A:** Describe in words how you would use inheritance to organize these classes.
 
-I would first create a class called "DigitalPets" as the parent class. I would then make a contructor that incorporates a `name`, `energy` level, and `happiness` level, and also can all `sleep` in the parent class. I would then create a sub class for Cats, Dogs, and Birds, Then I would write a "super()" keyword for each subclass. Super() calls the parent’s class constructor, allowing the child class to inherit and correctly set up properties defined in the parent class "DigitalPets." I would then add each subclass's unique ability within the subclass. 
+I would first create a class called "DigitalPets" as the parent class. I would then make a contructor that incorporates a `name`, `energy` level, and `happiness` level, and also the ability to `sleep` in the parent class. I would then create a sub class for Cats, Dogs, and Birds. Then I would write a "super()" keyword for each subclass. Super() calls the parent’s class constructor, allowing the child class to inherit and correctly set up properties defined in the parent class "DigitalPets." I would then add each subclass's unique ability within the subclass of `hunt` for dogs, `chase` for cats. and `fly` for birds.
 
 **Part B:** Explain one advantage of using inheritance here instead of creating three completely separate classes.
 
 
-
 ## Response 4
+
+This is beneficial because inheritance follows the Don't Repeat Yourself Principle (DRY), which allows code to be reused instead of redeclared and shows inheritance through the usage of the extends keyword in its declaration, which allows the subclasses of Cats, Dogs, and Birds to use all the properties and methods of Digital Pets.
