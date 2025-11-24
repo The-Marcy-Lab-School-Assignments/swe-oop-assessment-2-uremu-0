@@ -13,8 +13,7 @@ As a quick guide, check the following before submitting:
 
 ## Question 1
 
-Encapsulation refers to building data and methods that operate on it into a single object. It also protects data by controlling access and making data private. 
-This concept is beneficial when programming because it allows the programmer to hide data, preventing outside code from changing it directly.
+Encapsulation refers to building data and methods that operate on it into a single object. It also protects data by controlling access and making data private. This concept is beneficial when programming because it allows the programmer to hide data, preventing outside code from changing it directly.
 
 Provide a code snippet to illustrate _encapsulation_.
 
@@ -49,8 +48,7 @@ console.log(user.score); // undefined -> protected
 
 Explain what the `this` keyword is. Why is the `this` keyword useful?
 
-  The `this` keyword refers to the current object in the context where a piece of code is executed, and it is often used in object methods. 
-  The `this` keyword is useful because it helps define and point to a specific object.
+  The `this` keyword refers to the current object in the context where a piece of code is executed, and it is often used in object methods. The `this` keyword is useful because it helps define and point to a specific object.
 
 In the code snippet below, what does `this` refer to?
 
@@ -122,7 +120,11 @@ You're building a game where players can raise different digital pets: Cats, Dog
 
 **Part A:** Describe in words how you would use inheritance to organize these classes.
 
-I would first create a class called "DigitalPets" as the parent class. I would then make a contructor that incorporates a `name`, `energy` level, and `happiness` level, and also the ability to `sleep` in the parent class. I would then create a sub class for Cats, Dogs, and Birds. Then I would write a "super()" keyword for each subclass. Super() calls the parent’s class constructor, allowing the child class to inherit and correctly set up properties defined in the parent class "DigitalPets." I would then add each subclass's unique ability within the subclass of `hunt` for dogs, `chase` for cats. and `fly` for birds.
+I would start by creating a parent class called "DigitalPets." In its constructor, I’d include properties such as name, energy, and happiness. I’d also define a method like sleep in the parent class, since all digital pets can sleep.
+
+Next, I’d create subclasses for Cats, Dogs, and Birds. In each subclass, I would use the super() keyword in the constructor to call the parent class’s constructor, ensuring that the base properties (name, energy, and happiness) are set up correctly. Then, I’d add unique methods for each subclass, such as chase for cats, hunt for dogs, and fly for birds, to represent behaviors specific to each type of pet.
+
+This approach uses inheritance to share common features among all pets, while allowing for specialized behaviors in each subclass.
 
 **Part B:** Explain one advantage of using inheritance here instead of creating three completely separate classes.
 
