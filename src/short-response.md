@@ -13,7 +13,7 @@ As a quick guide, check the following before submitting:
 
 ## Question 1
 
-Encapsulation refers to building data and methods that operate on it into a single object. It also protects data by controlling access and making data private. This concept is beneficial when programming because it allows the programmer to hide data, preventing outside code from changing it directly.
+Encapsulation refers to bundling or grouping data and the methods that operate on that data into a single object. It also protects that data by controlling access—typically by making certain values private. This restricted access means that outside code cannot directly modify internal data; instead, it must interact through a class (or object) interface that exposes only the intended behaviors.
 
 Provide a code snippet to illustrate _encapsulation_.
 
@@ -41,7 +41,7 @@ user.addScore();
 console.log(user.getScore()); // 1
 console.log(user.score); // undefined -> protected
 ```
-
+This code snippet demonstrates encapsulation by grouping the data (name and score) with the methods that operate on it. The variable score is private and cannot be accessed directly from outside the object. Instead, the object provides a controlled interface—addScore() and getScore()—which is the only way to interact with that internal data. This protects the integrity of the data and illustrates how encapsulation restricts access while still allowing meaningful interaction through defined methods.
 ---
 
 ## Question 2
@@ -77,7 +77,9 @@ console.log(counterB.count);
 
 ## Response 2
 
-In the snippet, the `this` value is different in each context. The `this` keyword in "this.count = 0" refers to the instance counterA, and the `this` keyword in "this.count++" refers to the instance counterB.
+In the code snippet this will point to a different class instance depending on which class invokes the class constructor and methods.
+When counterA.increment() is invoked this will point to counterA.
+When counterB.increment() is invoked this will point to counterB.
 
 ---
 
@@ -87,7 +89,8 @@ In your own words, explain what **polymorphism** means in OOP. Provide an exampl
 
 ## Response 3
 
-Polymorphism is when a child or sub class replaces or overrides a parent method. It allows a sub class or a child class to provide a specialized behavior in code. It creates different outputs a while having the same function as the base.
+Polymorphism is when many objects share the same interface, but this same interface can be implemented differently in each object.
+For example, Polymorphism is when a child or sub class replaces or overrides a parent method. It allows a sub class or a child class to provide a specialized behavior in code. It creates different outputs a while having the same function as the base.
 
 ```js 
 class Food {
@@ -120,9 +123,9 @@ You're building a game where players can raise different digital pets: Cats, Dog
 
 **Part A:** Describe in words how you would use inheritance to organize these classes.
 
-I would start by creating a parent class called "DigitalPets." In its constructor, I’d include properties such as name, energy, and happiness. I’d also define a method like sleep in the parent class, since all digital pets can sleep.
+I would start by creating a parent class called `DigitalPets` In its constructor, I’d include properties such as `name`, `energy`, and `happiness`. I’d also define a method like `sleep` in the parent class, since all digital pets can sleep.
 
-Next, I’d create subclasses for Cats, Dogs, and Birds. In each subclass, I would use the super() keyword in the constructor to call the parent class’s constructor, ensuring that the base properties (name, energy, and happiness) are set up correctly. Then, I’d add unique methods for each subclass, such as chase for cats, hunt for dogs, and fly for birds, to represent behaviors specific to each type of pet.
+Next, I’d create subclasses for `Cats`, `Dogs`, and `Birds`. In each subclass, I would use the `super()` keyword in the constructor to call the parent class’s constructor, ensuring that the base properties (`name`, `energy`, and `happiness`) are set up correctly. Then, I’d add unique methods for each subclass, such as `chase` for `cats`, `hunt` for `dogs`, and `fly` for `birds`, to represent behaviors specific to each type of pet.
 
 This approach uses inheritance to share common features among all pets, while allowing for specialized behaviors in each subclass.
 
@@ -131,4 +134,4 @@ This approach uses inheritance to share common features among all pets, while al
 
 ## Response 4
 
-This is beneficial because inheritance follows the Don't Repeat Yourself Principle (DRY), which allows code to be reused instead of redeclared and shows inheritance through the usage of the extends keyword in its declaration, which allows the subclasses of Cats, Dogs, and Birds to use all the properties and methods of Digital Pets.
+This is beneficial because inheritance follows the Don't Repeat Yourself Principle (DRY), which allows code to be reused instead of redeclared and shows inheritance through the usage of the extends keyword in its declaration, which allows the subclasses of `Cats`, `Dogs`, and `Birds` to use all the properties and methods of `Digital Pets`.
